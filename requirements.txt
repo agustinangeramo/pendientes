@@ -1,2 +1,4 @@
 streamlit==1.24.0
 pandas==2.0.3
+Pillow==9.3.0  # o una versión anterior que sepas que funciona
+
