@@ -1,0 +1,3 @@
+N,Habitacion,Apellido y Nombre,Procedimiento,Observación,Prioridad,Completada
+1,dd,,,,Baja (Verde),True
+2,dd,ddd,,,Baja (Verde),False
