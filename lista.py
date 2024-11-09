@@ -73,6 +73,13 @@ with st.container():
         st.success("Tarea agregada exitosamente")
         st.experimental_rerun()
 
+# Título de la lista de tareas y recuento de tareas pendientes y finalizadas
+st.subheader("Lista de Tareas")
+tareas_pendientes = st.session_state.tareas[st.session_state.tareas["Completada"] == False].shape[0]
+tareas_finalizadas = st.session_state.tareas[st.session_state.tareas["Completada"] == True].shape[0]
+st.write(f"Tareas pendientes: {tareas_pendientes}")
+st.write(f"Tareas finalizadas: {tareas_finalizadas}")
+
 # Función para aplicar colores en función de la prioridad y el estado de completada
 def colorear_fila(fila):
     if fila["Completada"]:
@@ -154,7 +161,6 @@ if not st.session_state.tareas.empty:
 
 else:
     st.info("No hay tareas para mostrar.")
-
 
 # Sección para agregar seguimiento
 with st.container():
