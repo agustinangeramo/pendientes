@@ -162,6 +162,9 @@ if not st.session_state.tareas.empty:
 else:
     st.info("No hay tareas para mostrar.")
 
+# Título de la aplicación
+st.title("Pacientes Internados")
+
 # Sección para agregar seguimiento
 with st.container():
     st.subheader("Agregar Nuevo Seguimiento")
