@@ -2,6 +2,9 @@ import streamlit as st
 import pandas as pd
 import os
 
+st.set_page_config(layout="wide")
+
+
 # Nombre del archivo CSV para almacenar las tareas y seguimientos
 CSV_FILE_TAREAS = "tareas.csv"
 CSV_FILE_SEGUIMIENTOS = "seguimientos.csv"
