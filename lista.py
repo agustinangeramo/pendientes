@@ -131,7 +131,7 @@ if not st.session_state.tareas.empty:
             styled_row = row.to_frame().T.style.apply(colorear_fila, axis=1)
             st.dataframe(styled_row, use_container_width=True, hide_index=True)
         with col2:
-            if st.button("🗑️ Eliminar tarea", key=f"delete_{index}") and not st.session_state.tareas.empty:
+            if st.button("🗑️ Eliminar", key=f"delete_{index}") and not st.session_state.tareas.empty:
                 st.session_state.tareas = st.session_state.tareas.drop(index).reset_index(drop=True)
                 st.session_state.tareas["N"] = range(1, len(st.session_state.tareas) + 1)
                 guardar_tareas(st.session_state.tareas)
